@@ -11,7 +11,7 @@ class PetsController < ApplicationController
 
   # create route
   def create
-    render json: Pet.create(params["Pet"])
+    render json: Pet.create(params["pet"])
   end
 
   # delete route
@@ -21,6 +21,6 @@ class PetsController < ApplicationController
 
   # update route
   def update
-    render json: Pet.update(params["id"], params["Pet"])
+    render json: Pet.update(params["id"], params["pet"])
   end
 end
