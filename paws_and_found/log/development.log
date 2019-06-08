@@ -310,3 +310,25 @@ Processing by PetsController#show as HTML
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/pets" for ::1 at 2019-06-07 17:49:35 -0400
+Processing by PetsController#create as */*
+  Parameters: {"name"=>"Gizmo", "species"=>"dog", "breed"=>"Chiuaha", "photo"=>"https://pet-uploads.adoptapet.com/4/5/9/363003065.jpg", "last_known_location"=>"Ice cream stand", "description"=>"light brown pointy ears likes to be called giz also loves bones", "found"=>true, "pet"=>{"name"=>"Gizmo", "species"=>"dog", "breed"=>"Chiuaha", "photo"=>"https://pet-uploads.adoptapet.com/4/5/9/363003065.jpg", "last_known_location"=>"Ice cream stand", "description"=>"light brown pointy ears likes to be called giz also loves bones", "found"=>true}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for ::1 at 2019-06-07 17:49:41 -0400
+Processing by PetsController#index as HTML
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2019-06-07 17:52:36 -0400
+Processing by PetsController#create as */*
+  Parameters: {"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false, "pet"=>{"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for ::1 at 2019-06-07 17:52:40 -0400
+Processing by PetsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
