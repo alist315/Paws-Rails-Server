@@ -16,6 +16,7 @@ def self.all
         }
     end
 end
+
 def self.find(id)
     results = DB.exec("SELECT * FROM pets WHERE id=#{id};")
     return {
@@ -29,6 +30,7 @@ def self.find(id)
       "found" => results.first["found"]
     }
 end
+
 def self.create(opts)
     results = DB.exec(
         <<-SQL
@@ -48,6 +50,7 @@ def self.create(opts)
       "found" => results.first["found"]
     }
 end
+
 def self.delete(id)
     results = DB.exec("DELETE FROM pets WHERE id=#{id};")
     return { "deleted" => true }
