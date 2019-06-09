@@ -332,3 +332,8 @@ Processing by PetsController#index as HTML
 Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/pets" for ::1 at 2019-06-08 17:13:20 -0700
+Processing by PetsController#index as */*
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
