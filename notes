@@ -1,0 +1,1 @@
+CREATE TABLE pets (id SERIAL, name VARCHAR(30), species VARCHAR(30), breed VARCHAR(30), photo VARCHAR(250), last_known_location VARCHAR(60), description VARCHAR(500), found BOOLEAN);

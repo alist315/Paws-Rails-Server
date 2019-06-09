@@ -11,6 +11,7 @@ class PetsController < ApplicationController
 
   # create route
   def create
+    p 'create method in controller'
     render json: Pet.create(params["pet"])
   end
 
