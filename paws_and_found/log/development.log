@@ -332,6 +332,7 @@ Processing by PetsController#index as HTML
 Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
 Started GET "/pets" for ::1 at 2019-06-08 12:05:08 -0400
 Processing by PetsController#index as HTML
 Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.0ms)
@@ -356,5 +357,10 @@ Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
 Started GET "/pets" for ::1 at 2019-06-08 20:59:58 -0400
 Processing by PetsController#index as */*
 Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/pets" for ::1 at 2019-06-08 17:13:20 -0700
+Processing by PetsController#index as */*
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+>>>>>>> e78dd329201060d29fb58d9cccd189ac8649e763
 
 
