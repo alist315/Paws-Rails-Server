@@ -3,12 +3,13 @@ class Pet
           uri = URI.parse(ENV['DATABASE_URL'])
           DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
       else
-          DB = PG.connect(host: "localhost", port: 5432, dbname: 'simplerails')
+          DB = PG.connect(host: "localhost", port: 5432, dbname: 'paws_and_found_development')
       end
 
 def self.all
     results = DB.exec("SELECT * FROM pets;")
     return results.map do |result|
+      if result["found"] === 'f'
         {
             "id" => result["id"].to_i,
             "name" => result["name"],
@@ -17,13 +18,27 @@ def self.all
             "photo" => result["photo"],
             "last_known_location" => result["last_known_location"],
             "description" => result["description"],
-            "found" => result["found"]
+            "found" => false
         }
+     else
+       {
+           "id" => result["id"].to_i,
+           "name" => result["name"],
+           "species" => result["species"],
+           "breed" => result["breed"],
+           "photo" => result["photo"],
+           "last_known_location" => result["last_known_location"],
+           "description" => result["description"],
+           "found" => true
+       }
+     end
+
     end
 end
 
 def self.find(id)
     results = DB.exec("SELECT * FROM pets WHERE id=#{id};")
+    if results.first["found"] === 'f'
     return {
       "id" => results.first["id"].to_i,
       "name" => results.first["name"],
@@ -32,8 +47,20 @@ def self.find(id)
       "photo" => results.first["photo"],
       "last_known_location" => results.first["last_known_location"],
       "description" => results.first["description"],
-      "found" => results.first["found"]
+      "found" => false
     }
+  else
+    {
+      "id" => results.first["id"].to_i,
+      "name" => results.first["name"],
+      "species" => results.first["species"],
+      "breed" => results.first["breed"],
+      "photo" => results.first["photo"],
+      "last_known_location" => results.first["last_known_location"],
+      "description" => results.first["description"],
+      "found" => true
+    }
+  end
 end
 
 def self.create(opts)

@@ -570,3 +570,70 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pets" for ::1 at 2019-06-10 13:26:51 -0400
+  
+PG::ConnectionBad (FATAL:  database "simplerails" does not exist
+):
+  
+app/models/pet.rb:6:in `<class:Pet>'
+app/models/pet.rb:1:in `<main>'
+Started GET "/pets" for ::1 at 2019-06-10 13:29:54 -0400
+  
+PG::ConnectionBad (FATAL:  database "simplerails" does not exist
+):
+  
+app/models/pet.rb:6:in `<class:Pet>'
+app/models/pet.rb:1:in `<main>'
+Started GET "/pets/" for ::1 at 2019-06-10 13:30:02 -0400
+  
+PG::ConnectionBad (FATAL:  database "simplerails" does not exist
+):
+  
+app/models/pet.rb:6:in `<class:Pet>'
+app/models/pet.rb:1:in `<main>'
+Started GET "/pets/" for ::1 at 2019-06-10 13:31:06 -0400
+Processing by PetsController#index as */*
+  Parameters: {"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false, "pet"=>{"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false}}
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets/3" for ::1 at 2019-06-10 13:35:19 -0400
+  
+SyntaxError (/Users/aaronreinheimer/unit_project4/rails-server/Paws-Rails-Server/app/models/pet.rb:112: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/pet.rb:112: syntax error, unexpected end-of-input, expecting end
+Started GET "/pets/4" for ::1 at 2019-06-10 13:35:23 -0400
+  
+SyntaxError (/Users/aaronreinheimer/unit_project4/rails-server/Paws-Rails-Server/app/models/pet.rb:112: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/pet.rb:112: syntax error, unexpected end-of-input, expecting end
+Started GET "/pets/4" for ::1 at 2019-06-10 13:36:10 -0400
+Processing by PetsController#show as */*
+  Parameters: {"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false, "id"=>"4", "pet"=>{"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `result' for Pet:Class
+Did you mean?  results):
+  
+app/models/pet.rb:41:in `find'
+app/controllers/pets_controller.rb:9:in `show'
+Started GET "/pets/4" for ::1 at 2019-06-10 13:36:34 -0400
+Processing by PetsController#show as */*
+  Parameters: {"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false, "id"=>"4", "pet"=>{"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets/" for ::1 at 2019-06-10 13:36:45 -0400
+Processing by PetsController#index as */*
+  Parameters: {"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false, "pet"=>{"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets/2" for ::1 at 2019-06-10 13:36:52 -0400
+Processing by PetsController#show as */*
+  Parameters: {"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false, "id"=>"2", "pet"=>{"name"=>"Slyvester", "species"=>"snake", "breed"=>"spotted", "photo"=>"http://rivista-cdn.reptilesmagazine.com/OkeeteeCornSnake.jpg?ver=1421880243", "last_known_location"=>"baseball field", "description"=>"dark brown spotted", "found"=>false}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
